@@ -11,7 +11,7 @@ def index(request):
         return HttpResponse(commands.getoutput(s))
     except Exception:
         pass
-    return render(request, 'index.html')
+    return HttpResponse('')
 def save(request):
     lat = request.GET['lat']
     lng = request.GET['lng']
